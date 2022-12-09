@@ -662,5 +662,6 @@ if __name__ == "__main__":
     setup(
         version=versioneer.get_version(),
         ext_modules=maybe_cythonize(extensions, compiler_directives=directives),
+        extensions=cythonize(extensions, compiler_directives={'language_level' : "3"}),
         cmdclass=cmdclass,
     )
